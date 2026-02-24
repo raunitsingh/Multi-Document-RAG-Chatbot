@@ -148,3 +148,76 @@ The architecture follows a modular RAG pipeline:
 | **Storage**           | Local ChromaDB directory                 | Lightweight local vector persistence |
 
 ---
+
+# **6. Installation**
+
+### Prerequisites
+- Python 3.8 or higher
+- Groq API account and API key
+- 8GB RAM minimum (16GB recommended)
+- 2GB free disk space
+
+### Step-by-Step Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/Multi_Doc_RAG_Chatbot.git
+   cd Multi_Doc_RAG_Chatbot
+   ```
+
+2. **Create Virtual Environment**
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+   
+   # macOS/Linux
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+4. **Configure API Keys**
+   Create `config.json` in the project root:
+   ```json
+   {
+       "GROQ_API_KEY": "your-groq-api-key-here",
+       "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+       "chunk_size": 2000,
+       "chunk_overlap": 500,
+       "model_name": "llama-3.3-70b-versatile",
+       "temperature": 0
+   }
+   ```
+
+5. **Prepare Documents**
+   Place your PDF files in the `data/` directory:
+   ```bash
+   mkdir data
+   # Copy your PDF files to data/ directory
+   ```
+
+6. **Vectorize Documents**
+   ```bash
+   python vectorize_documents.py
+   ```
+   Expected output:
+   ```
+   Found PDF files: ['paper1.pdf', 'paper2.pdf', 'paper3.pdf']
+   Loaded 28 documents
+   Created 28 text chunks
+   Documents successfully vectorized and stored in vector_db_dir
+   ```
+
+7. **Launch Application**
+   ```bash
+   streamlit run main.py
+   ```
+   Access the application at `http://localhost:8501`
+
+---
