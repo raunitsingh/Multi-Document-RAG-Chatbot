@@ -94,3 +94,42 @@ The system ensures that every answer is grounded in the actual documents, enabli
 * High trustworthiness for enterprise auditing
 
 ---
+
+# **4. System Architecture **
+
+The architecture follows a modular RAG pipeline:
+
+### **4.1 Document Ingestion Module**
+
+* Scans folder for PDF files
+* Applies preprocessing such as removal of special characters
+* Converts PDF → Text using PyPDFLoader
+
+### **4.2 Vectorization Pipeline**
+
+* Intelligent chunk splitting
+* Embedding generation using Sentence-BERT
+* ChromaDB vector indexing
+* Persistent disk storage
+
+### **4.3 Query Processing**
+
+* Cleans user query
+* Embeds query using the same embedding model
+* Executes top-k vector search
+* Assembles a context document containing the relevant chunks
+
+### **4.4 Response Generation**
+
+* Sends prompt + retrieved context to Groq Llama-3.3-70B
+* Generates grounded answers
+* Attaches citation indices for user verification
+
+### **4.5 User Interface Layer**
+
+* Clean Streamlit chat interface
+* History preservation
+* PDF indexing status reports
+* Real-time answer display
+
+---
