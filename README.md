@@ -43,3 +43,20 @@ Organizations, researchers, and enterprise teams increasingly depend on large co
 This leads to the development of the **Multi-Document RAG Chatbot**.
 
 ---
+
+# **2. Solution Overview**
+
+The proposed solution is a **Multi-Document Retrieval-Augmented Generation (RAG) Chatbot**, capable of ingesting multiple documents, converting them into vector embeddings, retrieving relevant chunks, and generating accurate, context-rich answers powered by a high-speed LLM.
+
+**Key capabilities:**
+
+* Multi-document ingestion and semantic understanding
+* Advanced embedding-based retrieval using ChromaDB
+* Ultra-fast reasoning with Groq Llama-3.3-70B
+* Natural conversational interface in Streamlit
+* Full citation and source-traceability
+* Configurable architecture (chunking, retrieval parameters, model parameters)
+
+The system ensures that every answer is grounded in the actual documents, enabling dependable business and research usage.
+
+---
