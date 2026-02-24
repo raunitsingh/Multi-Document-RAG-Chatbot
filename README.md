@@ -8,3 +8,38 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
+
+# **1. Problem Statement**
+
+Organizations, researchers, and enterprise teams increasingly depend on large collections of unstructured documents such as PDF reports, research papers, policies, manuals, and business documents. Extracting accurate, context-aware information from these documents is difficult due to the following challenges:
+
+1. **Manual Reading Overhead**
+   Users must search across multiple documents, consuming significant time and increasing risk of missed information.
+
+2. **Keyword Search Limitations**
+   Traditional keyword-based search returns irrelevant results because it cannot understand semantic meaning, intent, or context.
+
+3. **Fragmented Knowledge**
+   Different PDFs may contain interrelated concepts, but users cannot easily connect this information across documents.
+
+4. **Static Search Systems**
+   Most tools lack interactive reasoning, natural dialogue, follow-up questioning, and dynamic adaptation to user needs.
+
+5. **Lack of Source Transparency**
+   Many AI chat systems provide answers without traceability to original sources, limiting reliability and trust.
+
+6. **High Inference Costs & Latency**
+   Enterprise LLMs often require expensive cloud-hosted models and produce slow responses.
+
+**Therefore, a system is required that:**
+
+* Aggregates multiple documents
+* Performs semantic-level search
+* Understands relationships between documents
+* Provides natural conversational responses
+* Remains transparent and traceable
+* Achieves high performance at low cost
+
+This leads to the development of the **Multi-Document RAG Chatbot**.
+
+---
