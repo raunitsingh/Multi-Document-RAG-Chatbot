@@ -327,3 +327,41 @@ Enable detailed logging by setting log level in config.json:
    Support for images, tables, and scanned PDFs.
 
 -----
+
+
+## Configuration
+
+### Environment Variables
+You can override config.json settings with environment variables:
+```bash
+export GROQ_API_KEY="your-api-key"
+export EMBEDDING_MODEL="sentence-transformers/all-MiniLM-L6-v2"
+export CHUNK_SIZE=2000
+```
+
+### Customization Options
+
+**Chunking Strategy:**
+```json
+{
+    "chunk_size": 2000,
+    "chunk_overlap": 500
+}
+```
+
+**Model Settings:**
+```json
+{
+    "model_name": "llama-3.3-70b-versatile",
+    "temperature": 0,
+    "max_tokens": 1024
+}
+```
+
+**Retrieval Parameters:**
+```json
+{
+    "retrieval_top_k": 5,
+    "similarity_threshold": 0.7
+}
+```
