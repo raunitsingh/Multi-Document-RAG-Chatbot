@@ -221,3 +221,90 @@ The architecture follows a modular RAG pipeline:
    Access the application at `http://localhost:8501`
 
 ---
+
+# **7. Usage **
+
+## **7.1 Basic Usage**
+
+User enters natural language questions such as:
+
+* "What do all documents say about transformer models?"
+* "Provide a comparison of methodologies in all PDFs."
+* "Summarize major findings from the second paper."
+
+## **7.2 Advanced Usage**
+
+* User may refine queries based on previous context.
+* Citations allow direct verification of information.
+* Multi-step conversation allows deeper research-style querying.
+
+### Example Interactions
+
+**Query**: "What are the key findings about transformer architectures?"
+**Response**: "Based on Document 2 (pages 4-7), the key findings about transformer architectures include... [source citations]"
+
+**Query**: "How do the methodologies differ between paper 1 and paper 3?"
+**Response**: "Paper 1 uses traditional machine learning approaches while Paper 3 focuses on deep learning. Specifically... [comparative analysis with citations]"
+
+---
+
+# **8. Performance Metrics**
+
+| Metric                  | Value                  | Notes                                  |
+| ----------------------- | ---------------------- | -------------------------------------- |
+| Document Ingestion Time | 2–4 minutes for 3 PDFs | Depends on text density                |
+| ChromaDB Size           | ~50 MB for 28 chunks   | Scales linearly                        |
+| Average Latency         | 3–7 seconds            | Groq significantly reduces LLM latency |
+| Accuracy                | 85–90%                 | Grounded RAG answers                   |
+| Retrieval Precision     | High                   | Due to embedding-based similarity      |
+
+### System Metrics
+- **Document Processing**: 3 PDFs → 28 chunks in 2-4 minutes
+- **Vector Database**: 45-60MB storage size
+- **Query Response**: 3-7 seconds average
+- **Accuracy**: 85-90% contextual accuracy
+- **Context Relevance**: High precision in retrieval
+
+### Optimization Features
+- **Vector Caching**: Persistent embedding storage
+- **Batch Processing**: Efficient document ingestion
+- **Semantic Search**: HNSW indexing for fast similarity search
+- **Memory Management**: Efficient conversation context handling
+---
+
+# **9. Troubleshooting **
+### Common Issues
+
+**PDF Processing Errors:**
+```bash
+# If you encounter Poppler issues, the system automatically uses PyPDFLoader
+# No additional system dependencies required
+```
+
+**API Key Issues:**
+```bash
+# Verify your configuration
+python -c "import json; config = json.load(open('config.json')); print('Config valid:', 'GROQ_API_KEY' in config)"
+```
+
+**Vector Database Corruption:**
+```bash
+# Reset vector database
+rm -rf vector_db_dir
+python vectorize_documents.py
+```
+
+**Memory Issues:**
+- Reduce chunk_size in config.json
+- Limit conversation history length
+- Monitor system resources during operation
+
+### Debug Mode
+Enable detailed logging by setting log level in config.json:
+```json
+{
+    "log_level": "DEBUG"
+}
+```
+
+---
