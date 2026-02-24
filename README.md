@@ -365,3 +365,30 @@ export CHUNK_SIZE=2000
     "similarity_threshold": 0.7
 }
 ```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+### Code Standards
+- Follow PEP 8 guidelines
+- Include docstrings for all functions
+- Add type hints where possible
+- Write comprehensive tests
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**⭐ Star this repo if you find it helpful!**
+
+[Report Bug](https://github.com/your-username/Multi_Doc_RAG_Chatbot/issues) · [Request Feature](https://github.com/your-username/Multi_Doc_RAG_Chatbot/issues)
+
+</div>
