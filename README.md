@@ -60,3 +60,37 @@ The proposed solution is a **Multi-Document Retrieval-Augmented Generation (RAG)
 The system ensures that every answer is grounded in the actual documents, enabling dependable business and research usage.
 
 ---
+
+# **3. Features**
+
+## **3.1 Multi-Document Intelligence**
+
+* Automatic scanning of directories for PDF files
+* Extraction of raw text using PyPDFLoader
+* Conversion to structured document units
+* Chunking into 2000-character blocks with 500-character overlap
+* Cross-document semantic mapping
+* Consistent performance regardless of the number of documents
+
+## **3.2 Advanced Semantic Search**
+
+* Vector embeddings computed using HuggingFace Sentence-BERT
+* ChromaDB persistent vector store
+* Hybrid similarity metrics (cosine, L2 distance, dot-product)
+* Retrieval of top-k relevant contextual chunks
+
+## **3.3 Natural Conversational Interface**
+
+* Continuous conversation memory
+* Ability to ask follow-up queries
+* Business-language query support
+* Streaming-style interactive UI (future enhancement ready)
+
+## **3.4 Comprehensive Source Attribution**
+
+* Exact document names and page references
+* Ranked citations for every retrieved chunk
+* Confidence ranking based on similarity score
+* High trustworthiness for enterprise auditing
+
+---
