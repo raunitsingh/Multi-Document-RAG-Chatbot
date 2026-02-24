@@ -308,3 +308,22 @@ Enable detailed logging by setting log level in config.json:
 ```
 
 ---
+
+# **10. Future Enhancements **
+
+1. **Document Upload Interface**
+   Users upload documents directly from UI.
+
+2. **Improved Citation Linking**
+   Clickable references with highlighting.
+
+3. **True Streaming Responses**
+   Faster perceived latency via token streaming.
+
+4. **Dashboard for Metrics**
+   Track cost, speed, and usage.
+
+5. **Multi-Modal RAG**
+   Support for images, tables, and scanned PDFs.
+
+-----
