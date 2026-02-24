@@ -133,3 +133,18 @@ The architecture follows a modular RAG pipeline:
 * Real-time answer display
 
 ---
+
+# **5. Technology Stack (Detailed)**
+
+| Layer                 | Technologies                             | Purpose                              |
+| --------------------- | ---------------------------------------- | ------------------------------------ |
+| **Frontend**          | Streamlit 1.38.0                         | Real-time chat UI                    |
+| **LLM**               | Groq API + Llama-3.3-70b-versatile       | High-speed reasoning                 |
+| **Embeddings**        | Sentence-transformers (all-MiniLM-L6-v2) | Semantic understanding               |
+| **Vector Store**      | ChromaDB                                 | Persistent embedding storage         |
+| **Document Parsing**  | PyPDFLoader, LangChain loaders           | PDF → text conversion                |
+| **Backend Framework** | LangChain                                | RAG pipeline orchestration           |
+| **Environment**       | Python 3.8+, virtualenv                  | Stable and isolated execution        |
+| **Storage**           | Local ChromaDB directory                 | Lightweight local vector persistence |
+
+---
