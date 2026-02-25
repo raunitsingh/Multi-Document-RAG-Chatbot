@@ -62,3 +62,27 @@ def setup_memory():
     )
 
 
+# ============================================================
+# 3️⃣ QUERY PROCESSING + 4️⃣ RESPONSE GENERATION
+# Build Conversational RAG Chain
+# ============================================================
+
+def build_conversational_chain(config, retriever, memory):
+    llm = ChatGroq(
+        model=config["model_name"],
+        temperature=config.get("temperature", 0),
+        max_tokens=config.get("max_tokens", 1024)
+    )
+
+    chain = ConversationalRetrievalChain.from_llm(
+        llm=llm,
+        retriever=retriever,
+        memory=memory,
+        verbose=False,
+        return_source_documents=True,
+        output_key="answer"
+    )
+
+    return chain
+
+
