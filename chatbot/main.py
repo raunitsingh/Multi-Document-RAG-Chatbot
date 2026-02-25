@@ -42,3 +42,23 @@ def load_vectorstore(working_dir: str):
     return vectorstore
 
 
+# ============================================================
+# 2️⃣ RETRIEVAL SETUP
+# Configure retriever and memory
+# ============================================================
+
+def setup_retriever(vectorstore, top_k: int = 5):
+    return vectorstore.as_retriever(
+        search_type="similarity",
+        search_kwargs={"k": top_k}
+    )
+
+
+def setup_memory():
+    return ConversationBufferMemory(
+        memory_key="chat_history",
+        return_messages=True,
+        output_key="answer"
+    )
+
+
