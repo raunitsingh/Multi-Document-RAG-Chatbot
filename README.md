@@ -95,7 +95,7 @@ The system ensures that every answer is grounded in the actual documents, enabli
 
 ---
 
-# **4. System Architecture **
+# 4. System Architecture 
 
 The architecture follows a modular RAG pipeline:
 
