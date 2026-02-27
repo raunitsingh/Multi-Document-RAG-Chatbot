@@ -222,7 +222,7 @@ The architecture follows a modular RAG pipeline:
 
 ---
 
-# **7. Usage **
+# 7. Usage 
 
 ## **7.1 Basic Usage**
 
