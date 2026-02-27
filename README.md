@@ -272,7 +272,7 @@ User enters natural language questions such as:
 - **Memory Management**: Efficient conversation context handling
 ---
 
-# **9. Troubleshooting **
+# 9. Troubleshooting 
 ### Common Issues
 
 **PDF Processing Errors:**
