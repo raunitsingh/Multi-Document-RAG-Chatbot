@@ -309,7 +309,7 @@ Enable detailed logging by setting log level in config.json:
 
 ---
 
-# **10. Future Enhancements **
+# 10. Future Enhancements 
 
 1. **Document Upload Interface**
    Users upload documents directly from UI.
