@@ -1,0 +1,14 @@
+# Vector DB
+vector_db_dir/
+
+# User documents
+data/
+
+# Virtual env
+.venv/
+
+# Python cache
+__pycache__/
+
+# OS files
+.DS_Store
