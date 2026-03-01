@@ -12,3 +12,9 @@ __pycache__/
 
 # OS files
 .DS_Store
+
+rag_env/
+venv/
+__pycache__/
+*.pyc
+.env
