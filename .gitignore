@@ -1,20 +1,23 @@
-# Vector DB
-vector_db_dir/
-
-# User documents
-data/
-
-# Virtual env
+# Environment
 .venv/
-
-# Python cache
-__pycache__/
-
-# OS files
-.DS_Store
-
-rag_env/
-venv/
+.env
 __pycache__/
 *.pyc
-.env
+*.pyo
+
+# Config with secrets
+config.json
+
+# Vector DB (large, regeneratable)
+vector_db_dir/
+
+# Data files
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
